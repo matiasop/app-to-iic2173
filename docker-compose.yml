@@ -30,7 +30,7 @@ services:
       - app
     ports:
       - 80:80
-        restart: unless-stopped
+    restart: unless-stopped
     volumes:
       - web-root:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
