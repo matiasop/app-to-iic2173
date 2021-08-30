@@ -30,14 +30,14 @@ services:
       - app
     ports:
       - 80:80
+      - 443:443
     restart: unless-stopped
     volumes:
       - web-root:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
-    depends_on:
-      - app
+      - dhparam:/etc/ssl/certs
     # networks:
     #   - app-network
   certbot:
@@ -49,7 +49,7 @@ services:
       - web-root:/var/www/html
     depends_on:
       - nginx
-    command: certonly --webroot --webroot-path=/var/www/html --email movalle4@uc.cl --agree-tos --no-eff-email --staging -d iic2173-mop.tk  -d www.iic2173-mop.tk
+    command: certonly --webroot --webroot-path=/var/www/html --email movalle4@uc.cl --agree-tos --no-eff-email --force-renewal -d iic2173-mop.tk  -d www.iic2173-mop.tk
 
 volumes:
   certbot-etc:
@@ -59,4 +59,10 @@ volumes:
     driver_opts:
       type: none
       device: /home/ubuntu/app-to-iic2173/public/
+      o: bind
+  dhparam:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/ubuntu/app-to-iic2173/dhparam/
       o: bind
