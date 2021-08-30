@@ -58,5 +58,5 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/ubuntu/e0arquiaws/public/
+      device: /home/ubuntu/app-to-iic2173/public/
       o: bind
