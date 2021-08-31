@@ -48,3 +48,9 @@ Se usó certbot para asegurar SSL con Let's Encrypt. Se cehquea automaticamente 
 ## Notficiación via correo
 
 - [NO LOGRADO]
+
+## Tutoriales usados
+
+- Docker ,Ruby and Postgresql setup: https://scotto.medium.com/2021-docker-ruby-3-rails-6-puma-nginx-postgres-d84c95f68637
+- HTTPS: https://www.digitalocean.com/community/tutorials/how-to-secure-a-containerized-node-js-application-with-nginx-let-s-encrypt-and-docker-compose
+- Usuarios en Rails: https://medium.com/@wintermeyer/authentication-from-scratch-with-rails-5-2-92d8676f6836

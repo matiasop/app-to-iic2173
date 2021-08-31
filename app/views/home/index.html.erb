@@ -1,1 +1,16 @@
+<% if current_user %>
+  Logged in as <%= current_user.email %>.
+  <%= link_to "Log Out", logout_path %>
+<% else %>
+  <%= link_to "Sign Up", signup_path %> or 
+  <%= link_to "Log In", login_path %>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
 <h1>Entrega 0 Arqui. de Sist. de Soft.</h1>
+
+<ul>
+    <li><%= link_to "Products", products_path %></li>
+    <li><%= link_to "Solicitudes", requests_path %></li>
+</ul>

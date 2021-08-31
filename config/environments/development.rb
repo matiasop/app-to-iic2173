@@ -2,7 +2,8 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.force_ssl = true
+  # config.force_ssl = true
+  config.force_ssl = false
   config.hosts << "www.iic2173-mop.tk"
   config.hosts << "iic2173-mop.tk"
 
