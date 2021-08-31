@@ -44,3 +44,7 @@ Se usó certbot para asegurar SSL con Let's Encrypt. Se cehquea automaticamente 
 - [LOGRADO] RNF1
 - [LOGRADO] RNF2
 - [LOGRADO] RNF3
+
+## Notficiación via correo
+
+- [NO LOGRADO]
