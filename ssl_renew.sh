@@ -1,0 +1,8 @@
+#!/bin/bash
+
+COMPOSE="/usr/local/bin/docker-compose --no-ansi"
+DOCKER="/usr/bin/docker"
+
+cd /home/ubuntu/app-to-iic2173
+$COMPOSE run certbot renew --dry-run && $COMPOSE kill -s SIGHUP app
+$DOCKER system prune -af
